@@ -1,2 +1,257 @@
-Project- HandsMen
-TrailHead Account Link: https://www.salesforce.com/trailblazer/vj5n28plhfj5w7axgi
+Project:- HandsMen Threads: Elevating the Art of Sophistication in Men's Fashion
+
+TrailHead Account Link : https://www.salesforce.com/trailblazer/vj5n28plhfj5w7axgi
+Org used : rahulmehta8006790@agentforce.com
+
+HandsMen Threads a dynamic organization in the fashion industry, is embarking on a Salesforce project designed to revolutionize their data management and enhance customer relations. The project involves building a robust data model tailored to store all pertinent business data, ensuring a seamless flow of information across the organization.
+we have learned : 
+i- Data Modelling- Data Modelling in Salesforce is the process of defining how data is structured, stored, and related to other data within the Salesforce platform. It is structured, stored, and related using objects, fields, and relationships in Salesforce.
+ii- Data Quality- Ensures data accuracy, completeness, and consistency using validation rules, picklists, and duplicate management.
+iii- Lightning App Builder- A drag-and-drop tool to create custom pages and layouts for apps, records, and home screens in Lightning Experience.
+iv- Record Triggered Flows- Automated flows that run when a record is created, updated, or deleted to perform actions like updates or notifications.
+v- Apex and Apex Triggers- Apex is Salesforce's coding language used for complex logic, and triggers automate actions during record changes.
+vi- Asynchronous Apex- Executes long-running or delayed operations in the background using future methods, batch, or scheduled jobs.
+
+1- Data Management - Objects
+The following are the Custom objects which we need to create :
+i- HandsMen Customer
+ii- HandsMen Order
+iii- HandsMen Product
+iv- Inventory
+v- Marketing Campaign
+
+To create an object: 
+From the setup page → Click on Object Manager → Click on Create → Click on Custom Object.
+    Enter the label name→ HandsMen Customer
+    Plural label name→ HandsMen Customer
+    Enter Record Name Label and Format
+    Record Name → HandsMen Customer Name
+    Data Type → Text
+    Click on Allow reports, 
+    Allow search → Save.
+
+From the setup page → Click on Object Manager → Click on Create → Click on Custom Object.
+    Enter the label name→ HandsMen Product
+    Plural label name→ HandsMen Products
+    Enter Record Name Label and Format
+    Record Name → HandsMen Product Name
+    Data Type → Text
+    Click on Allow reports
+    Allow search → Save
+
+
+
+From the setup page → Click on Object Manager → Click on Create → Click on Custom Object. 
+    Enter the label name→ HandsMen Order
+    Plural label name→ HandsMen Orders
+    Enter Record Name Label and Format
+    Record Name → HandsMen OrderNumber
+    Data Type → Auto Number
+    Display Format → O-{0000}
+    Starting Number → 001
+    Click on Allow reports
+    Allow search → Save
+
+
+From the setup page → Click on Object Manager → Click on Create → Click on Custom Object. 
+    Enter the label name→ Inventory 
+    Plural label name→ Inventorys
+    Enter Record Name Label and Format
+    Record Name → Inventory Number
+    Data Type → Auto Number
+    Display Format → I -{0000}
+    Starting Number → 001
+    Click on Allow reports
+    Allow search → Save
+
+
+From the setup page → Click on Object Manager → Click on Create → Click on Custom Object. 
+    Enter the label name→ Marketing Campaign
+    Plural label name→ Marketing Campaigns
+    Enter Record Name Label and Format
+    Record Name → Marketing Campaign Number
+    Data Type → Auto Number
+    Display Format → MC -{0000}
+    Starting Number → 001
+    Click on Allow reports
+    Allow search → Save
+
+
+2- Data Management - Tabs
+Data Management in Salesforce refers to the creation, organization, control, and maintenance of data across objects, fields, applications, and users to ensure smooth functioning of business processes.
+Tabs in Salesforce are navigation items that allow users to easily access objects, visual pages, or web content from the app interface.
+
+Tab - HandsMen Customer
+Creating a Custom Tab(HandsMen Customer)
+To create a Tab(HandsMen Customer )
+Go to setup page → type Tabs in Quick Find bar → click on tabs → New (under custom object tab) 
+Select Object(HandsMen Customer) → Select any tab style → Next (Add to profiles page) keep it as default → Next (Add to Custom App) keep it as default → Save.
+
+These are Tabs are created in HandsMen Threads:
+i- HandsMen Customer
+ii- HandsMen Orders
+iii- HandsMen Products
+iv- Inventorys
+v- Marketing Campaingns
+vi- Reports
+vii- Dashboards
+
+
+
+3- Data Management - App Manager
+App Manager is a Salesforce setup tool used to create, manage, and customize apps that group related tabs, objects, and components for specific business needs or user roles.
+Create a Lightning App
+To create a lightning app page:
+
+Go to setup page → search “app manager” in quick find → select “app manager” → click on New lightning App.
+
+Fill the app name in app details and branding as follow
+App Name : HandsMen Threads
+Developer Name : this will auto populated
+Description : Give a meaningful description
+Image : optional (if you want to give any image you can otherwise not mandatory)
+Primary color hex value : keep this default
+Then click Next  → (App option page) keep it as default → Next → (Utility Items) keep it as default → Next.
+To Add Navigation Items:
+Search the items in the search bar(HandsMen Customer, HandsMen Order, Inventory, HandsMen Product, Reports, Dashboard, Account, Contact , Marketing Campaign) from the search bar and move it using the arrow button → Next.
+To Add User Profiles:
+Search profiles (System administrator) in the search bar → click on the arrow button → save & finish.
+
+
+4- Data Management- Field
+Fields in Salesforce are individual data points or columns within an object that store specific pieces of information for each record.
+i- Field - Email
+Creating Field in HandsMen Customer Object
+To create fields in an object:
+Go to setup → click on Object Manager → type object name(HandsMen Customer) in quick find bar→ click on the object. 
+Now click on “Fields & Relationships” → New
+Select Data type as “Email”.
+Click on Next
+Fill the above as following:
+Field Label: Email
+Field Name : gets auto generated
+Click on Next → Next → Save and new.
+
+ii- Field - Phone
+Creating Phone on HandsMen Customer Object
+Go to setup → click on Object Manager → type object name(HandsMen Customer) in quick find bar→ click on the object. 
+Now click on “Fields & Relationships” → NeW
+Select Data type as “Phone” and click Next.
+Click on Next.
+Fill the above as following:
+Field Label: Phone.
+Field Name : gets auto generated.
+Click on Next → Next → Save and new.
+
+iii- Field - Loyalty Status
+Creating Picklist field on HandsMen Customer object.
+Go to setup → click on Object Manager → type object name(HandsMen Customer) in quick find bar→ click on the object. 
+Now click on “Fields & Relationships” → New.
+Select Data type as “Picklist” and click Next.
+Enter Field Label as “Loyalty Status”, under values select “Enter values, with each value separated by a new line" and enter values as shown below:
+Gold
+Silver
+Bronze
+Click Next→ Next → Next → Save & New.
+
+iv- Create Lookup Relationship
+Unit 1 : Creating Lookup Relationship between Marketing Campaign and HandsSome Customer
+To Create a lookup relationship 
+Go to the setup page → click on object manager → type object name(Marketing Campaign) in the quick find bar→ click on the object. 
+Click on fields & relationship → click on New.
+Select “lookup relationship” as data type and click Next.
+For field label related to: select “HandsMen Customer” object and click Next.
+Give Field Label as “HandsMen Customer” and click Next.
+Next → Next → Save.
+
+Unit 2 : Creating Lookup Relationship between HandsMen Product and HandsMen Order
+To Create a lookup relationship 
+Go to the setup page → click on object manager → type object name(HandsMen Product) in the quick find bar→ click on the object. 
+Click on fields & relationship → click on New.
+Select “lookup relationship” as data type and click Next.
+For field label related to: select “HandsMen Order” object and click Next.
+Give Field Label as “Order” and click Next.
+Next → Next → Save.
+
+Unit 3 : Creating Lookup Relationship between HandsMen Order and HandsMen Customer
+To Create a lookup relationship 
+Go to the setup page → click on object manager → type object name(HandsMen Order) in the quick find bar→ click on the object. 
+Click on fields & relationship → click on New.
+Select “lookup relationship” as data type and click Next.
+For field label related to: select “HandsMen Customer” object and click Next.
+Give Field Label as “Customer” and click Next.
+Next → Next → Save.
+
+Unit 4 : Creating Master-Detail Relationship between Inventory and HandsSome Product
+To Create a Master-Detail relationship 
+Go to the setup page → click on object manager → type object name(Inventory) in the quick find bar→ click on the object. 
+Click on fields & relationship → click on New.
+Select “Master-Detail relationship” as data type and click Next.
+For field label related to: select “HandsMen Product” object and click Next.
+Give Field Label as “Product” and click Next.
+Next → Next → Save.
+
+
+v-Formula Fields
+vi- Creataing Remaining Fields for the object
+
+5- Data Configuration
+
+
+
+
+6- Data Security - Profiles
+
+
+
+
+7- Data Security -Roles
+
+
+
+8- Data Security- Users
+
+
+
+
+9- Data Security- Permission Set
+
+
+
+
+
+10- Email Template
+
+
+
+
+
+11- Flows
+
+
+
+
+
+
+12- Automation Using Apex
+
+
+
+
+
+13- Batch Jobs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
